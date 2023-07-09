@@ -3,85 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce website</title>
-    <link rel="stylesheet" href="style.css">
-		<link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Restaurent</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,600;0,700;1,200&family=Poppins:wght@100;200;300;500;600;700;800;900&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="page" class="site">
-        <header>
-          <div class="header-top">
-            <div class="container">
-                <div class="wrapper flexitem">
-                    <div class="left"></div>
-                     <ul class="flexitem main-links">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Featured Products</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                     </ul>
-                    <div class="right">
-                        <ul class="flexitem main-links">
-                                
-													<li><a href="#">Sign Up</a></li>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Order Tracking</a></li>
-                                <li><a href="#">USD <span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></i></span></a>
-											            <ul>
-																		<li><a  class="current"href="#">USD</a></li>
-																		<li><a href="#">EURO</a></li>
-																		<li><a href="#">GBP</a></li>
-																		<li><a href="#">IDR</a></li>
-																	</ul>
-																</li>
-                                <li><a href="#">English<span class="icon-small"><i class="ri-arrow-down-s-line"></i></span></a>
-											
-																	<ul>
-																		<li><a  class="current"href="#">USD</a></li>
-																		<li><a href="#">German</a></li>
-																		<li><a href="#">Spamish</a></li>
-																		<li><a href="#">Bahasa</a></li>
-																	</ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <header>
+      <a href="#" class="logo" ><i class='bx bx-restaurant'>Foods</i></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="#home"><i class='bx bx-home'>Home</i></a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu"><i class='bx bx-food-menu'>Menu</i></a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact"><i class='bx bxs-contact'>Contact</i></a></li>
+
+      </ul>
+    </header>
+
+    <!--------home start -->
+    <section class="home" id="home" >
+        <div class="home-text">
+            <h1>Full website</h1>
+            <h2>Food The <br> Most Precious Things</h2>
+            <a href="#" class="btn">Today's Menu</a>
+        </div>
+
+        <div class="home-img">
+            <img src="assets/images/grilled-beef-burger-with-fries-cheese-tomato-generative-ai.jpg">
+
+        </div>
+
+    </section>
+     <!--------about start -->
+     <section class="about" id="about">
+        <div class="about-img">
+            <img src="assets/images/fresh-sandwich-cutting-board-with-healthy-tomatoes-generative-ai.jpg">
+        </div>
+
+        <div class="about-text">
+            <span>About Us</span>
+            <h2>we speak the good <br> food language</h2>
+            <p>there are many variations passages of lorem Ipsum available
+                ,but the majority have suffered alteration in form , by injected 
+                humour randomised words don't look even slightly believable.
+            </p>
+            <a href="#" class="btn">Today's Menu</a>
+        </div>
+     </section>
+    <!--------about start -->
+     <section class="menu" id="menu">
+          <div class="heading">
+            <span>Food menu</span>
+            <h2>Fresh taste and great price</h2>
           </div>
-					 <div class="header-nav">
-						<div class="container">
-							<div class="wrapper flexitem"></div>
-							 <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
-						    <div class="left">
-                   <div class="logo"><a href="/style.css"><span class="circle">.Store</span></a></div>
-								     <nav class="mobile-hide">
-											<ul class="flexitem second-links">
-												<li><a href="#">Home</a></li>
-												<li><a href="#">Shop</a></li>
-												<li>
-													<a href="#">Women
-													 <div class="small-icon"><i class="ri-arrow-down-s-line"></i></div>
-                          </a>
-												</li>
-												<li><a href="#">Men</a></li>
-												<li><a href="#">Sports
-													<div class="fly-item"><span>New!</span></div>
-												</a>
-											</li>
-											</ul>
-										 </nav>
-									</div>
-								<div class="right">
-
-								</div>
-							</div>
-					 </div>
-        </header>
-
-        <main></main>
-
-        <footer></footer>
+          <div class="menu-container">
+            <div class="box">
+                <div class="box-img">
+                  <img src="assets/images/roasted-meat-slices-with-fried-vegetables-sauce.jpg">
+                </div>
+                <h2>chicken slices with fried vegetables sauce</h2>
+                <h3>Tasty Food</h3>
+                <span>11.00$</span>
+                <i class='bx bx-cart'></i>
+            </div>
+    
+            <div class="menu-container">
+                <div class="box">
+                    <div class="box-img">
+                      <img src="assets/images/chocolate-lava-cake-white-plate.jpg">
+                    </div>
+                    <h2>chicken slices with fried vegetables sauce</h2>
+                    <h3>Tasty Food</h3>
+                    <span>11.00$</span>
+                    <i class='bx bx-cart'></i>
+                </div>
+                <div class="menu-container">
+                    <div class="box">
+                        <div class="box-img">
+                          <img src="assets/images/kiev-style-cutlet-wooden-board-with-french-fries-arugula-tomato-cucumber-sauce-top-view.jpg">
+                        </div>
+                        <h2>roasted meat slices with fried vegetables sauce</h2>
+                        <h3>Tasty Food</h3>
+                        <span>11.00$</span>
+                        <i class='bx bx-cart'></i>
+                </div>
+         </div>
     </div>
+     </section>
 
-   <script src="script.js"></script>
 </body>
 </html>
