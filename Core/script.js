@@ -1,57 +1,19 @@
 let slideIndex = 0;
-const slides = document.getElementsByClassName("slide-img");
-
-let touchStartX = 0;
-let touchEndX = 0;
 showSlides();
 
-// La fonction pour changer les slides est renommée en "changeSlide"
-function changeSlide(n) {
-    slideIndex += n;
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    } else if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
+function showSlides() {
+    const slides = document.getElementsByClassName("menu-container");
+    
     for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.add("hidden");
+        slides[i].style.display = "none";
     }
 
-    slides[slideIndex - 1].classList.remove("hidden");
-}
-
-// Le reste du code JavaScript reste inchangé
-
-
-function handleGesture() {
-  if (touchEndX < touchStartX) {
-    // Swipe left
     slideIndex++;
     if (slideIndex > slides.length) {
-      slideIndex = 1;
+        slideIndex = 1;
     }
-  } else if (touchEndX > touchStartX) {
-    // Swipe right
-    slideIndex--;
-    if (slideIndex < 1) {
-      slideIndex = slides.length;
-    }
-  }
+    
+    slides[slideIndex - 1].style.display = "block";
 
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 1000); // Change slide every 3 seconds
 }
-
-document.addEventListener("touchstart", function (event) {
-  touchStartX = event.changedTouches[0].screenX;
-});
-
-document.addEventListener("touchend", function (event) {
-  touchEndX = event.changedTouches[0].screenX;
-  handleGesture();
-});
-

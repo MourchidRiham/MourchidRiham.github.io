@@ -63,6 +63,41 @@ header{
     display: none;
 
 }
+/* Vos styles CSS existants ... */
+
+/* Style pour la sous-liste des catégories de menu */
+.menu-categories {
+    position: absolute;
+    display: none;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.menu-categories li {
+    padding: 10px;
+    text-align: left;
+}
+
+.menu-categories a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu-categories a:hover {
+    color: var(--main-color);
+}
+
+/* Afficher la sous-liste au survol */
+.navbar li:hover .menu-categories {
+    display: block;
+}
+
+
+
 section{
     padding: 70px 17%;
 }
@@ -135,44 +170,47 @@ section{
 .heading h2 {
     font-size: var(--h2-font);
     }
-.box{
+
+.box {
     position: relative;
     margin-top: 4rem;
-    height: auto;
+    height: 400px; /* Taille unique */
+    width: 100%; /* Centrer horizontalement */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centrer horizontalement */
     justify-content: center;
     background: #feeee7;
     padding: 20px;
     border-radius: 0.5rem;
 }
-.box-img{
-    width: 300px;
-    height: 220px;
+
+.box-img {
+    width: 350px; /* Taille unique */
+    height: 220px; /* Taille unique */
 }
-.box-img img{
+
+.box-img img {
     width: 100%;
     height: 100%;
-
-  
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto; /* Centrer horizontalement */
 }
 
-.slider {
-    display: flex;
-    overflow-x: hidden;
-    align-items: center;
-  }
-  
 
 .menu-container {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    transition: transform 0.3s ease; 
-  }
-  
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
 
 .menu-container .box-img img {
     width: 100%;
@@ -180,8 +218,9 @@ section{
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+    display: block;
+    margin: 0 auto; 
+}
 
 .menu-container h2 {
     font-size: 24px;
@@ -199,44 +238,6 @@ section{
     font-size: 20px;
     font-weight: bold;
   }
- 
-.slider-nav span.active {
-    color: #000;
-  }
-
-.slider-nav {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-.slider-container {
-    display: flex;
-    transition: transform 3s ease;
-  }
-  
-.slider-container {
-    display: flex;
-    transition: transform 3s ease;
-}
-
-.slider-nav span {
-    cursor: pointer;
-    font-size: 24px;
-    margin: 0 10px;
-    color: #888;
-}
-
-.hidden {
-    display: none;
-}
-
-.slide-img {
-    display: none;
-}
-
-.slide-img.visible {
-    display: block;
-}
 
 .contact-form label,
 .contact-form input,
@@ -289,3 +290,187 @@ label {
     border-radius: 5px;
     cursor: pointer;
 }
+/* Your existing CSS styles ... */
+
+/* Add a new class for the orange box */
+.orange-box {
+    width: 100%;
+    height: 30px;
+    background-color: var(--main-color);
+}
+
+.form-separator {
+    height: 100px; /* Adjust the height as needed */
+}
+
+/* Center the entire footer content */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; /* Ensure the footer is on top of the box */
+}
+
+/* Style for the white divider */
+.white-divider {
+    width: 2px;
+    background-color: white;
+    margin: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure the divider is above the box */
+}
+
+
+/* Style for both lists (Contact Us and Follow Us) */
+.footer-contact,
+.footer-social {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center; /* Center the content */
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    margin-top: 0; /* Remove top margin */
+}
+
+.footer-contact ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li,
+.footer-social li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+}
+
+.footer-contact i,
+.footer-social i {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+.footer-social a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--main-color);
+}
+.shopping-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.shopping-list-group {
+    display: inline-block; /* Pour aligner les groupes de listes côte à côte */
+    vertical-align: top; /* Pour aligner les groupes en haut de la ligne */
+    width: calc(32.50% - 15px); /* Pour afficher trois groupes côte à côte avec un espacement de 20px entre eux */
+    margin-right: 20px; /* Espacement entre les groupes de listes */
+    text-align: center;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.item {
+    background-color: #feeee7;
+    margin: 10px; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
+    text-align: center;
+    max-width: 300px;/* Ajouter de la marge autour de chaque article */
+    color: #333;
+}
+.item img {
+    max-width: 70% ;
+    height: 40% ;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px; /* Ajuster le padding pour un en-tête plus compact */
+    }
+
+    .navbar {
+        flex-direction: column; /* Afficher les éléments de la barre de navigation en colonne */
+        align-items: center; /* Centrer les éléments horizontalement */
+        background: var(--bg-color); /* Changer le fond pour améliorer la lisibilité */
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+    }
+
+    /* Afficher le menu au clic sur l'icône du menu */
+    .navbar.active {
+        transform: translateY(0);
+    }
+
+    /* Ajuster la taille de police pour les éléments de la barre de navigation */
+    .navbar a {
+        font-size: 1.2rem;
+    }
+
+    /* Ajuster l'icône du menu pour un design réactif */
+    #menu-icon {
+        display: block; /* Afficher l'icône du menu */
+    }
+
+    /* Ajuster la taille de la police pour le logo */
+    .logo {
+        font-size: 2rem;
+    }
+    .shopping-list-group {
+        width: calc(50% - 20px); /* Pour afficher deux groupes par ligne avec un espacement de 20px entre eux */
+    }
+}
+
+
